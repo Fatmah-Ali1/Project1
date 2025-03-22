@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('backgrounff.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: brightness(20%);
+  z-index: -1;
+}
+
+
+.head {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4a235a;
+}
+
+.logo span {
+  color: #ffccff;
+  font-style: italic;
+}
+
+.menu a {
+  color: #5a036b;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #ffebee;
+  text-shadow: 0 0 10px #0d0107;
+}
+
+
+section {
+
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  padding: 180px 5%;
+}
+
+
+#home {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.glitch {
+  font-size: 40px;
+  color: hsl(316, 11%, 40%);
+  position: relative;
+  display: inline-block;
+  margin: left 1px;
+}
+
+
+
+.new-releases {
+  margin: 50px 0;
+}
+
+.games-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.game-box {
+  width: 180px;
+  height: 180px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.game-box:hover {
+  transform: scale(1.1);
+}
+
+.game-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.input-message{
+width: 100%;
+padding: 2.5rem;
+font-size: 1.8rem;
+color: var(--text-color);
+background: var(--second-bg-color);
+border-radius: 2rem;
+border: 2px solid var(--main-color);
+margin: 1.5rem 0;
+resize: none;
+}
+
+
+.Feedback {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logoo {
+  font-size: 28px;
+  color: #ffccff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  gap: 30px;
+}
+
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #ffccff;
+  box-shadow: 0px 0px 8px rgba(255, 204, 255, 0.8);
+}
+
+
+.input-message {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.input-message textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  height: 120px;
+  transition: 0.3s;
+  outline: none; 
+
+ 
+}
+
+
+.input-message textarea:focus {
+  border-color: #ffccff;
+  box-shadow: 0px 0px 8px rgba(255, 204, 255, 0.8);
+}
+
+.button {
+  background: linear-gradient(135deg, #753370 0%, #298096 100%);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 204, 255, 0.5);
+}
+
+@media screen and (max-width: 700px) {
+  form {
+      flex-direction: column;
+  }
+
+  .input-message textarea {
+      height: 100px;
+  }
+}
+
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff;
+  }
+
+  50% {
+    text-shadow: -2px -2px 0px #ff00ff, 2px 2px 0px #00ffff;
+  }
+
+  100% {
+    text-shadow: 2px -2px 0px #ff00ff, -2px 2px 0px #00ffff;
+  }
+  
+}

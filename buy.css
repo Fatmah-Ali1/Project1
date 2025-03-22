@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('backgrounff.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(20%);
+    z-index: -1;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4a235a;
+}
+
+.logo span {
+    color: #ffccff;
+    font-style: italic;
+}
+
+
+.head {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu a {
+    color: #e2e2e2;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #bdbdbd;
+    text-shadow: 0 0 10px #0d0107;
+}
+
+.card {
+    color: #ffccff;
+    width: 50rem;
+    margin: 6%;
+    background: rgba(255, 255, 255, 0.2);
+    position: center;
+    align-self: center;
+    top: 50rem;
+    border-radius: 1.5rem;
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rightside {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 50rem;
+    position: center;
+    align-self: center;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1.5rem;
+    padding: 1rem 2rem 3rem 3rem;
+
+}
+
+
+p {
+    color: white;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: .8rem 0;
+}
+
+.inputbox {
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    color: #3c2c38;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.expcvv {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.6rem;
+}
+
+.expcvv_text {
+    padding-right: 1rem;
+}
+
+.expcvv_text2 {
+    padding: 0 1rem;
+}
+
+.button {
+    background: linear-gradient(135deg, #753370 0%, #298096 100%);
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width: 100%;
+    letter-spacing: .11rem;
+    outline: none;
+}
+
+.button:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+@media only screen and (max-width: 1000px) {
+    .card {
+        flex-direction: column;
+        width: auto;
+
+    }
+
+
+
+    .rightside {
+        width: auto;
+        border-bottom-left-radius: 1.5rem;
+        padding: 0.5rem 3rem 3rem 2rem;
+        border-radius: 0;
+    }
+}

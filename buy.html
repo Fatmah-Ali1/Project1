@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="buy.css">
+</head>
+
+<body>
+
+  <header class="head">
+    <h2 class="logo">Game <span>Verse</span></h2>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+
+  <body>
+
+    <div class="card">
+
+      <div class="rightside">
+        <form>
+          <h1>Buy</h1>
+          <h2>Payment Information</h2>
+          <p>Cardholder Name</p>
+          <input type="text" class="inputbox" name="name" required />
+          <p>Card Number</p>
+          <input type="tel" class="inputbox" name="card_number" required placeholder="####-####-####-####" />
+
+          <p>Card Type</p>
+          <select class="inputbox" name="card_type" id="card_type" required>
+            <option value="">--Select a Card Type--</option>
+            <option value="Visa">Visa</option>
+            <option value="RuPay">PayPul</option>
+            <option value="RuPay">مدى</option>
+
+            <option value="MasterCard">MasterCard</option>
+          </select>
+          <div class="expcvv">
+
+            <p class="expcvv_text">Expiry</p>
+            <input type="month" class="inputbox" name="exp_month" id="exp_month" required />
+
+            <p class="expcvv_text2">CVV</p>
+            <input type="password" class="inputbox" name="cvv" id="cvv" required />
+          </div>
+          <p></p>
+          <input type="submit"  value="Buy"  class="button">
+        </form>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
